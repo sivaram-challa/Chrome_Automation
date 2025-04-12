@@ -8,13 +8,11 @@ import org.openqa.selenium.WebElement;
 public class App {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
-
         driver.get("https://www.python.org");
         WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.sendKeys("pycon");
         searchBox.submit();
-
-        System.out.println("Title is: " + driver.getTitle());
+        System.out.println("Title: " + driver.getTitle());
         driver.quit();
     }
 }
